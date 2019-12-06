@@ -5,6 +5,7 @@ import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPause = findViewById(R.id.btnPause);
         textView = findViewById(R.id.textView);
         progressBar = findViewById(R.id.progressBar);
-
+        Log.d("TAG","onCreate");
 
         //외부장치를 권한 설정 요청
         ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
